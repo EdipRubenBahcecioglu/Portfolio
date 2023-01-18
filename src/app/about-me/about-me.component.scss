@@ -1,5 +1,5 @@
 .main-about-me-box{
-    height: 100vh;
+    height: calc(100vh - 100px);
     width: 100vw;
     max-width: 100%;
     display: flex;
@@ -30,8 +30,8 @@
     margin-right: 150px;
 
     img{
-        height: 350px;
-        width: 350px;
+        height: 510px;
+        width: 510px;
         object-fit: cover;
         border-radius: 100%;
         border: 4px solid #00bee8;
@@ -69,6 +69,6 @@
     position: absolute;
     top: 50%;
     right: 0px;
-    width: 375px;
+    width: 296px;
 }
 
