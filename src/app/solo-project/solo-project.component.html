@@ -1,0 +1,31 @@
+<div class="solo-project-box" [class.otherDirectionSoloProject]="flexDirection == 'true'">
+    <div class="laptop-img">
+        <img src="../../assets/img/projects/{{ projectImgPath }}">
+    </div>
+    <div class="project-info" [class.otherDirectionProjectInfo]="flexDirection == 'true'">
+        <div class="project-name">{{ projectname }}</div>
+        <div class="project-language">{{ projectLanguage }}</div>
+        <div class="project-description" [class.otherDirectionProjectDescription]="flexDirection == 'true'">{{ projectDescription }}</div>
+        <div class="project-btn-box">
+            <div class="live-test">
+                <button (click)="openProject(liveTestLink)">Live Test</button>
+            </div>
+            <div class="github">
+                <button (click)="openGithub(githubLink)">Github</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--    
+    //Abwechselnde Bildausrichtung Projects
+
+    solo-project-box
+    -> flex-direction: row-reverse;
+
+    project-info
+    -> align-items: flex-end;
+
+    project-description
+    -> text-align: end;
+-->
