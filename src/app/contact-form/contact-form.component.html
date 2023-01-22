@@ -1,0 +1,37 @@
+<div id="contact" class="main-contact-box">
+    <div class="main-header-box">
+        <div class="purple-border"></div>
+        <div class="header-text">
+            Contact
+        </div>
+    </div>
+
+    <div class="contact-box">
+        <div class="main-contact-text-box">
+            <div class="headline">Got a problem to solve?</div>
+            <div class="contact-text">
+                Contact me through this form, I am interested in hearing you, knowing ideas and constributing to your projects with my work.
+            </div>
+            <div class="last-words">
+                Need a Frontend developer? <b>Contact me!</b>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form (submit)="sendMail()" #myform ngNativeValidate #myForm>
+                <input required type="text" name="name" #nameField placeholder="Your name">
+                <input required type="email" message="message" #messageField placeholder="Your email">
+                <textarea required type="text" placeholder="Your text"></textarea>
+                <button #sendButton>Send Message :)</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="purple-shadow">
+        <img src="../../assets/img/backgrounds/shadow/contact-shadow.png">
+    </div>
+
+    <div class="arrow-up-box" (click)="scrollTop()">
+        <img src="../../assets/img/others/arrow-up.png">
+    </div>
+</div>

@@ -12,4 +12,10 @@ export class MySkillsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scrollTo(target) {
+    console.log(`scrolling to ${target}`);
+    let el = document.getElementById(target);
+    el.scrollIntoView({behavior: "smooth"});
+  }
+
 }
