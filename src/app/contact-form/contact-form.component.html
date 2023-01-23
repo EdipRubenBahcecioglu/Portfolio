@@ -19,10 +19,34 @@
 
         <div class="contact-form">
             <form (submit)="sendMail()" #myform ngNativeValidate #myForm>
-                <input required type="text" name="name" #nameField placeholder="Your name">
-                <input required type="email" message="message" #messageField placeholder="Your email">
-                <textarea required type="text" placeholder="Your text"></textarea>
-                <button #sendButton>Send Message :)</button>
+                <div class="solo-input-field">
+                    <input (click)="checkUserInputName()" (keyup)="checkUserInputName()" [class.inputSucces]="nameLength" [class.inputAlert]="requiredHintName" required type="text" name="name" #nameField placeholder="Your name">
+                    <div class="input-feedback">   
+                        <img *ngIf="requiredHintName" src="../../assets/img/others/warning.png">
+                        <img *ngIf="nameLength" src="../../assets/img/others/succes.png">
+                    </div>
+                </div>
+                <div *ngIf="requiredHintName" class="required-hint">Your name is required</div>
+
+                <div class="solo-input-field">
+                    <input (click)="checkUserInputMail()" (keyup)="checkUserInputMail()" [class.inputSucces]="emailLength" [class.inputAlert]="requiredHintMail" required type="email" name="email" #emailField placeholder="Your email">
+                    <div class="input-feedback">
+                        <img *ngIf="requiredHintMail" src="../../assets/img/others/warning.png">
+                        <img *ngIf="emailLength" src="../../assets/img/others/succes.png">
+                    </div>
+                </div>
+                <div *ngIf="requiredHintMail" class="required-hint">Your email is required</div>
+
+
+                <div class="solo-input-field">
+                    <textarea (click)="checkUserText()" (keyup)="checkUserText()" [class.inputSucces]="messageLength" [class.inputAlert]="requiredHintMessage" required type="text" name="message" #messageField placeholder="Your text"></textarea>
+                    <div class="input-feedback">
+                        <img *ngIf="requiredHintMessage" src="../../assets/img/others/warning.png">
+                        <img *ngIf="messageLength" src="../../assets/img/others/succes.png">
+                    </div>
+                </div>
+                <div *ngIf="requiredHintMessage" class="required-hint">Your message is empty</div>
+                <button type="submit" #sendButton>Send Message :)</button>
             </form>
         </div>
     </div>

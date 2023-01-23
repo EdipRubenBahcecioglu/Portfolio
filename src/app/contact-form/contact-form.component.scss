@@ -70,14 +70,13 @@
 .contact-form {
     width: 50vw;
     margin-right: 150px;
-    padding: -top;
     padding-top: 100px;
     height: calc(100vh - 336px);
 
     form {
         display: flex;
         flex-direction: column;
-        height: 80%;
+        height: 85%;
         justify-content: space-between;
         align-items: center;
         color: white;
@@ -92,6 +91,7 @@
             background: #141D2F;
             border: 1px solid #4B47FF;
             color: white;
+            outline: none;
 
             &:hover {
                 border: 1px solid #00BEE8;
@@ -116,6 +116,7 @@
             font-family: 'Poppins';
             font-style: normal;
             color: white;
+            outline: none;
 
             &:hover{
                 border: 1px solid #00BEE8;
@@ -166,4 +167,33 @@
         cursor: pointer;
         filter: brightness(0) saturate(100%) invert(76%) sepia(34%) saturate(5432%) hue-rotate(146deg) brightness(88%) contrast(109%);
     }
+}
+
+.inputAlert{
+    border: 1px solid #e61c40 !important;
+}
+
+.required-hint{
+    width: 100%;
+    font-size: 12px;
+    color: #e61c40;
+}
+
+.solo-input-field{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.input-feedback{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    right: 15px;
+}
+
+.inputSucces{
+    border: 1px solid #70e61c !important
 }

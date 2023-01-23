@@ -16,8 +16,6 @@ export class SoloProjectComponent implements OnInit {
   @Input() flexDirection:any;
 
   constructor() { 
-
-    console.log(this.flexDirection);
   }
 
   ngOnInit(): void {
