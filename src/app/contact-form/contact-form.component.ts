@@ -37,30 +37,67 @@ export class ContactFormComponent implements OnInit {
     console.log('Sending Mail', this.myForm);
     let nameField = this.nameField.nativeElement;
     let messageField = this.messageField.nativeElement;
+    let emailField = this.emailField.nativeElement;
     let sendButton = this.sendButton.nativeElement;
-    nameField.disabled = true;
-    messageField.disabled = true;
-    sendButton.disabled = true;
+    await this.disableForm(nameField, messageField, emailField, sendButton);
+    await this.clearForm(nameField, messageField, emailField, sendButton);
 
     //Animation anzeigen fürs senden
 
     let formData = new FormData();
     formData.append('name', nameField.value);
     formData.append('message', messageField.value);
+    formData.append('mail', emailField.value);
 
     //senden 
-    await fetch('https://edipbahcecioglu.com/edipbahcecioglu.com/send_mail.php',
+    // https://edipbahcecioglu.com/edipbahcecioglu.com/send_mail.php
+    await fetch('',
       {
         method: 'POST',
         body: formData
       }
     )
       // Text anzeigen: Nachricht gesendet !
-      nameField.disabled = false;
-      messageField.disabled = false;
-      sendButton.disabled = false;
+      setTimeout(()=>{
+        this.enableForm(nameField, messageField, emailField, sendButton);
+      }, 5000);
+
   }
 
+  async clearForm(nameField, messageField, emailField, sendButton){
+    nameField.value = '';
+    messageField.value = '';
+    emailField.value = '';
+    this.setFormStyleDefault();
+  }
+
+  setFormStyleDefault(){
+    this.nameLength = false;
+    this.emailLength = false;
+    this.messageLength = false;
+  }
+
+  async disableForm(nameField, messageField, emailField, sendButton){
+    nameField.disabled = true;
+    messageField.disabled = true;
+    emailField.disabled = true;
+    sendButton.disabled = true;
+  }
+
+  async enableForm(nameField, messageField, emailField, sendButton){
+    nameField.disabled = false;
+    messageField.disabled = false;
+    emailField.disabled = false;
+    sendButton.disabled = false;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
   ///// HIER PASSIERT NUR DAS GLEICHE !! LÖSUNG FINDEN !!
   checkUserInputName(){
     if(this.nameField.nativeElement.value == '' || this.nameField.nativeElement.value.length == 0){
@@ -77,13 +114,13 @@ export class ContactFormComponent implements OnInit {
   }
 
   checkUserInputMail(){
-    if(this.emailField.nativeElement.value == '' || this.emailField.nativeElement.value.length == 0){
+    if(this.emailField.nativeElement.value == '' || this.emailField.nativeElement.value.length == 0 || !this.emailField.nativeElement.value.includes('@')){
       this.requiredHintMail = true;
-    } else {
+    } else if(this.emailField.nativeElement.value.includes('@')) {
       this.requiredHintMail = false;
     }
 
-    if(this.emailField.nativeElement.value.length > 0){
+    if(this.emailField.nativeElement.value.length > 0 && this.emailField.nativeElement.value.includes('@')){
       this.emailLength = true;
     } else {
       this.emailLength = false;

@@ -46,7 +46,10 @@
                     </div>
                 </div>
                 <div *ngIf="requiredHintMessage" class="required-hint">Your message is empty</div>
-                <button type="submit" #sendButton>Send Message :)</button>
+                <div class="send-button">
+                    <button type="submit" #sendButton>Send Message :)</button> 
+                    <mat-spinner color="Warn"></mat-spinner>
+                </div>
             </form>
         </div>
     </div>

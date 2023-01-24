@@ -197,3 +197,18 @@
 .inputSucces{
     border: 1px solid #70e61c !important
 }
+
+.send-button{
+    display: flex;
+    height: 58px;
+}
+
+.mat-spinner {
+    height: 58px !important;
+    width: 58px !important;
+}
+
+.mat-progress-spinner svg{
+    height: 100%;
+    width: 100%;
+}
