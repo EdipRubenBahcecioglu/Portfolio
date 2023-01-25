@@ -91,16 +91,6 @@ export class ContactFormComponent implements OnInit {
     sendButton.disabled = false;
   }
 
-  checkUserInput(inputfield) {
-    if (inputfield == 'name') {
-      this.changeVariablesNameInput();
-    }
-
-    if (inputfield == 'message') {
-      this.changeVariablesMessageInput();
-    }
-  }
-
   checkUserInputMail() {
     if (this.emailField.nativeElement.value == '' || this.emailField.nativeElement.value.length == 0 || !this.emailField.nativeElement.value.includes('@')) {
       this.requiredHintMail = true;
@@ -115,31 +105,60 @@ export class ContactFormComponent implements OnInit {
     }
   }
 
-  changeVariablesNameInput() {
-    if (this.nameField.nativeElement.value == '' || this.nameField.nativeElement.value.length == 0) {
-      this.requiredHintName = true;
-    } else {
-      this.requiredHintName = false;
+  //##########COACH QUESTION START ###################//
+
+  checkUserInput(inputfield) {
+    if (inputfield == 'name') {
+      this.changeVariablesNameInput();
     }
 
-    if (this.nameField.nativeElement.value.length > 0) {
-      this.nameLength = true;
-    } else {
-      this.nameLength = false;
+    if (inputfield == 'message') {
+      this.changeVariablesMessageInput();
     }
   }
 
+  changeVariablesNameInput() {
+    this.cleanCodingAboveCode(this.nameField.nativeElement.value, this.requiredHintName, this.nameLength);
+    // if (this.nameField.nativeElement.value == '' || this.nameField.nativeElement.value.length == 0) {
+    //   this.requiredHintName = true;
+    // } else {
+    //   this.requiredHintName = false;
+    // }
+
+    // if (this.nameField.nativeElement.value.length > 0) {
+    //   this.nameLength = true;
+    // } else {
+    //   this.nameLength = false;
+    // }
+  }
+
   changeVariablesMessageInput() {
-    if (this.messageField.nativeElement.value == '' || this.messageField.nativeElement.value.length == 0) {
-      this.requiredHintMessage = true;
+    this.cleanCodingAboveCode(this.messageField.nativeElement.value, this.requiredHintMessage, this.messageLength);
+    // if (this.messageField.nativeElement.value == '' || this.messageField.nativeElement.value.length == 0) {
+    //   this.requiredHintMessage = true;
+    // } else {
+    //   this.requiredHintMessage = false;
+    // }
+
+    // if (this.messageField.nativeElement.value.length > 0) {
+    //   this.messageLength = true;
+    // } else {
+    //   this.messageLength = false;
+    // }
+  }
+
+  cleanCodingAboveCode(inputFieldValue, requiredHintInput, inputLength){
+    console.log('Value:',inputFieldValue, 'RequiredAlert:', requiredHintInput, 'Length:', inputLength);
+    if (inputFieldValue == '' || inputFieldValue.length == 0) {
+      requiredHintInput = true;
     } else {
-      this.requiredHintMessage = false;
+      requiredHintInput = false;
     }
 
-    if (this.messageField.nativeElement.value.length > 0) {
-      this.messageLength = true;
+    if (inputFieldValue.length > 0) {
+      inputLength = true;
     } else {
-      this.messageLength = false;
+      inputLength = false;
     }
   }
 }
