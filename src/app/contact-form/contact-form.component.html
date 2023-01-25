@@ -20,7 +20,7 @@
         <div class="contact-form">
             <form (submit)="sendMail()" #myform ngNativeValidate #myForm>
                 <div class="solo-input-field">
-                    <input (click)="checkUserInputName()" (keyup)="checkUserInputName()" [class.inputSucces]="nameLength" [class.inputAlert]="requiredHintName" required type="text" name="name" #nameField placeholder="Your name">
+                    <input (click)="checkUserInput('name')" (keyup)="checkUserInput('name')" [class.inputSucces]="nameLength" [class.inputAlert]="requiredHintName" required type="text" name="name" #nameField placeholder="Your name">
                     <div class="input-feedback">   
                         <img *ngIf="requiredHintName" src="../../assets/img/others/warning.png">
                         <img *ngIf="nameLength" src="../../assets/img/others/succes.png">
@@ -39,7 +39,7 @@
 
 
                 <div class="solo-input-field">
-                    <textarea (click)="checkUserText()" (keyup)="checkUserText()" [class.inputSucces]="messageLength" [class.inputAlert]="requiredHintMessage" required type="text" name="message" #messageField placeholder="Your text"></textarea>
+                    <textarea (click)="checkUserInput('message')" (keyup)="checkUserInput('message')" [class.inputSucces]="messageLength" [class.inputAlert]="requiredHintMessage" required type="text" name="message" #messageField placeholder="Your text"></textarea>
                     <div class="input-feedback">
                         <img *ngIf="requiredHintMessage" src="../../assets/img/others/warning.png">
                         <img *ngIf="messageLength" src="../../assets/img/others/succes.png">
