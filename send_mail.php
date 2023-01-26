@@ -36,8 +36,9 @@ switch ($_SERVER['REQUEST_METHOD']) {
         exit;
     case ("POST"): //Send the email;
 
-        $subject = "Contact From " . $_POST['name'];
-        $headers = "From:  noreply@edipbahcecioglu.com";
+        $subject = "Contact From" . $_POST['name'];
+        // $headers = "From:  noreply@edipbahcecioglu.com";
+        $headers = "From:" . $_POST['email'];
 
         mail($recipient, $subject, $_POST['message'], $headers);
         header("Location: " . $redirect); 

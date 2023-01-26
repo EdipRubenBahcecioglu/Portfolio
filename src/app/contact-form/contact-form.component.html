@@ -20,35 +20,35 @@
         <div class="contact-form">
             <form (submit)="sendMail()" #myform ngNativeValidate #myForm>
                 <div class="solo-input-field">
-                    <input (click)="checkUserInput('name')" (keyup)="checkUserInput('name')" [class.inputSucces]="nameLength" [class.inputAlert]="requiredHintName" required type="text" name="name" #nameField placeholder="Your name">
+                    <input (click)="checkFormsInput()" (keyup)="checkFormsInput()" [class.inputSucces]="nameField.value.length > 0 && formCheck" [class.inputAlert]="nameField.value == '' && formCheck || nameField.value.length == 0 && formCheck" required type="text" name="name" #nameField placeholder="Your name">
                     <div class="input-feedback">   
-                        <img *ngIf="requiredHintName" src="../../assets/img/others/warning.png">
-                        <img *ngIf="nameLength" src="../../assets/img/others/succes.png">
+                        <img *ngIf="nameField.value == '' && formCheck || nameField.value.length == 0 && formCheck" src="../../assets/img/others/warning.png">
+                        <img *ngIf="nameField.value.length > 0 && formCheck" src="../../assets/img/others/succes.png">
                     </div>
                 </div>
-                <div *ngIf="requiredHintName" class="required-hint">Your name is required</div>
+                <div *ngIf="nameField.value == '' && formCheck || nameField.value.length == 0 && formCheck" class="required-hint">Your name is required</div>
 
                 <div class="solo-input-field">
-                    <input (click)="checkUserInputMail()" (keyup)="checkUserInputMail()" [class.inputSucces]="emailLength" [class.inputAlert]="requiredHintMail" required type="email" name="email" #emailField placeholder="Your email">
+                    <input (click)="checkFormsInput()" (keyup)="checkFormsInput()" [class.inputSucces]="emailField.value.length > 0 && emailField.value.includes('@') && formCheck" [class.inputAlert]="emailField.value == '' && formCheck || emailField.value.length == 0 && formCheck || !emailField.value.includes('@') && formCheck" required type="email" name="email" #emailField placeholder="Your email">
                     <div class="input-feedback">
-                        <img *ngIf="requiredHintMail" src="../../assets/img/others/warning.png">
-                        <img *ngIf="emailLength" src="../../assets/img/others/succes.png">
+                        <img *ngIf="emailField.value == '' && formCheck || emailField.value.length == 0 && formCheck || !emailField.value.includes('@') && formCheck" src="../../assets/img/others/warning.png">
+                        <img *ngIf="emailField.value.length > 0 && emailField.value.includes('@') && formCheck" src="../../assets/img/others/succes.png">
                     </div>
                 </div>
-                <div *ngIf="requiredHintMail" class="required-hint">Your email is required</div>
+                <div *ngIf="emailField.value == '' && formCheck || emailField.value.length == 0 && formCheck || !emailField.value.includes('@') && formCheck" class="required-hint">Your email is required</div>
 
 
                 <div class="solo-input-field">
-                    <textarea (click)="checkUserInput('message')" (keyup)="checkUserInput('message')" [class.inputSucces]="messageLength" [class.inputAlert]="requiredHintMessage" required type="text" name="message" #messageField placeholder="Your text"></textarea>
+                    <textarea (click)="checkFormsInput()" (keyup)="checkFormsInput()" [class.inputSucces]="messageField.value.length > 0 && formCheck" [class.inputAlert]="messageField.value == '' && formCheck || messageField.value.length == 0 && formCheck" required type="text" name="message" #messageField placeholder="Your text"></textarea>
                     <div class="input-feedback">
-                        <img *ngIf="requiredHintMessage" src="../../assets/img/others/warning.png">
-                        <img *ngIf="messageLength" src="../../assets/img/others/succes.png">
+                        <img *ngIf="messageField.value == '' && formCheck || messageField.value.length == 0 && formCheck" src="../../assets/img/others/warning.png">
+                        <img *ngIf="messageField.value.length > 0 && formCheck" src="../../assets/img/others/succes.png">
                     </div>
                 </div>
-                <div *ngIf="requiredHintMessage" class="required-hint">Your message is empty</div>
+                <div *ngIf="messageField.value == '' && formCheck || messageField.value.length == 0 && formCheck" class="required-hint">Your message is empty</div>
                 <div class="send-button">
                     <button type="submit" #sendButton>Send Message :)</button> 
-                    <mat-spinner color="Warn"></mat-spinner>
+                    <mat-spinner [diameter]="50"></mat-spinner>
                 </div>
             </form>
         </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { TestScheduler } from 'rxjs/testing';
 
 @Component({
@@ -13,12 +13,10 @@ export class ContactFormComponent implements OnInit {
   @ViewChild('messageField') messageField: ElementRef;
   @ViewChild('sendButton') sendButton: ElementRef;
   @ViewChild('emailField') emailField: ElementRef;
-  requiredHintName = false;
   nameLength = false;
-  requiredHintMail = false;
   emailLength = false;
-  requiredHintMessage = false;
   messageLength = false;
+  formCheck = false;
 
   constructor() { }
 
@@ -35,20 +33,19 @@ export class ContactFormComponent implements OnInit {
   }
 
   async sendMail() {
+    this.formCheck = false;
     console.log('Sending Mail', this.myForm);
     let nameField = this.nameField.nativeElement;
     let messageField = this.messageField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let sendButton = this.sendButton.nativeElement;
-    await this.disableForm(nameField, messageField, emailField, sendButton);
-    await this.clearForm(nameField, messageField, emailField, sendButton);
 
     //Animation anzeigen fürs senden
 
     let formData = new FormData();
     formData.append('name', nameField.value);
     formData.append('message', messageField.value);
-    // formData.append('email', emailField.value);
+    formData.append('email', emailField.value);
 
     //senden 
     await fetch('https://edipbahcecioglu.com/send_mail.php',
@@ -57,6 +54,9 @@ export class ContactFormComponent implements OnInit {
         body: formData
       }
     )
+
+    await this.disableForm(nameField, messageField, emailField, sendButton);
+    await this.clearForm(nameField, messageField, emailField, sendButton);
     // Text anzeigen: Nachricht gesendet !
     setTimeout(() => {
       this.enableForm(nameField, messageField, emailField, sendButton);
@@ -68,13 +68,6 @@ export class ContactFormComponent implements OnInit {
     nameField.value = '';
     messageField.value = '';
     emailField.value = '';
-    this.setFormStyleDefault();
-  }
-
-  setFormStyleDefault() {
-    this.nameLength = false;
-    this.emailLength = false;
-    this.messageLength = false;
   }
 
   async disableForm(nameField, messageField, emailField, sendButton) {
@@ -91,74 +84,8 @@ export class ContactFormComponent implements OnInit {
     sendButton.disabled = false;
   }
 
-  checkUserInputMail() {
-    if (this.emailField.nativeElement.value == '' || this.emailField.nativeElement.value.length == 0 || !this.emailField.nativeElement.value.includes('@')) {
-      this.requiredHintMail = true;
-    } else if (this.emailField.nativeElement.value.includes('@')) {
-      this.requiredHintMail = false;
-    }
-
-    if (this.emailField.nativeElement.value.length > 0 && this.emailField.nativeElement.value.includes('@')) {
-      this.emailLength = true;
-    } else {
-      this.emailLength = false;
-    }
-  }
-
-  //##########COACH QUESTION START ###################//
-
-  checkUserInput(inputfield) {
-    if (inputfield == 'name') {
-      this.changeVariablesNameInput();
-    }
-
-    if (inputfield == 'message') {
-      this.changeVariablesMessageInput();
-    }
-  }
-
-  changeVariablesNameInput() {
-    this.cleanCodingAboveCode(this.nameField.nativeElement.value, this.requiredHintName, this.nameLength);
-    // if (this.nameField.nativeElement.value == '' || this.nameField.nativeElement.value.length == 0) {
-    //   this.requiredHintName = true;
-    // } else {
-    //   this.requiredHintName = false;
-    // }
-
-    // if (this.nameField.nativeElement.value.length > 0) {
-    //   this.nameLength = true;
-    // } else {
-    //   this.nameLength = false;
-    // }
-  }
-
-  changeVariablesMessageInput() {
-    this.cleanCodingAboveCode(this.messageField.nativeElement.value, this.requiredHintMessage, this.messageLength);
-    // if (this.messageField.nativeElement.value == '' || this.messageField.nativeElement.value.length == 0) {
-    //   this.requiredHintMessage = true;
-    // } else {
-    //   this.requiredHintMessage = false;
-    // }
-
-    // if (this.messageField.nativeElement.value.length > 0) {
-    //   this.messageLength = true;
-    // } else {
-    //   this.messageLength = false;
-    // }
-  }
-
-  cleanCodingAboveCode(inputFieldValue, requiredHintInput, inputLength){
-    console.log('Value:',inputFieldValue, 'RequiredAlert:', requiredHintInput, 'Length:', inputLength);
-    if (inputFieldValue == '' || inputFieldValue.length == 0) {
-      requiredHintInput = true;
-    } else {
-      requiredHintInput = false;
-    }
-
-    if (inputFieldValue.length > 0) {
-      inputLength = true;
-    } else {
-      inputLength = false;
-    }
+  checkFormsInput(){
+    this.formCheck = true;
   }
 }
+
