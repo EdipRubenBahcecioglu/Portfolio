@@ -202,6 +202,29 @@
     display: flex;
     align-items: center;
     height: 58px;
+    position: relative;
+    width: 450px;
+    justify-content: center;
+
+    img{
+        position: absolute;
+        right: 0px;
+        transition: all 225ms ease-in-out;
+    }
+}
+
+.send-button ::ng-deep .mat-progress-spinner circle,
+mat-spinner- circle {
+    stroke: #ffffff;
+}
+
+.send-button ::ng-deep .mat-progress-spinner svg,
+mat-spinner- svg {
+    width: 75% !important;
+    height: 75% !important;
+    position: absolute;
+    left: 0px;
+    top: 5px;
 }
 
 .mat-spinner {
@@ -210,39 +233,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 15px;
-
-    svg {
-        height: 75%;
-        width: 75%;
-        position: relative;
-    }
-}
-
-.mat-spinner[_ngcontent-shh-c69]{
-    svg{
-        height: 75%;
-        width: 75%;
-        position: relative;
-    }
-}
-
-.mat-progress-spinner svg{
-    height: 75%;
-    width: 75%;
-    position: relative;
-}
-
-.mat-progress-spinner{
-    svg{
-        height: 75%;
-        width: 75%;
-        position: relative;
-    }
-}
-
-.mat-progress-spinner.mat-progress-spinner-indeterminate-animation[mode=indeterminate] svg{
-    height: 75%;
-    width: 75%;
-    position: relative;
+    position: absolute;
+    right: 0px;
 }

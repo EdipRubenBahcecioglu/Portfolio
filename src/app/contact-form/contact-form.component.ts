@@ -17,6 +17,8 @@ export class ContactFormComponent implements OnInit {
   emailLength = false;
   messageLength = false;
   formCheck = false;
+  mailInProgress = false;
+  mailSuccess = false;
 
   constructor() { }
 
@@ -33,21 +35,18 @@ export class ContactFormComponent implements OnInit {
   }
 
   async sendMail() {
-    this.formCheck = false;
+    this.mailInProgress = true;
     console.log('Sending Mail', this.myForm);
     let nameField = this.nameField.nativeElement;
     let messageField = this.messageField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let sendButton = this.sendButton.nativeElement;
 
-    //Animation anzeigen fürs senden
-
     let formData = new FormData();
     formData.append('name', nameField.value);
     formData.append('message', messageField.value);
     formData.append('email', emailField.value);
 
-    //senden 
     await fetch('https://edipbahcecioglu.com/send_mail.php',
       {
         method: 'POST',
@@ -56,11 +55,17 @@ export class ContactFormComponent implements OnInit {
     )
 
     await this.disableForm(nameField, messageField, emailField, sendButton);
-    await this.clearForm(nameField, messageField, emailField, sendButton);
-    // Text anzeigen: Nachricht gesendet !
+    
+    setTimeout(()=>{
+      this.clearForm(nameField, messageField, emailField, sendButton);
+      this.mailSuccess = true;
+      this.mailInProgress = false;
+      this.formCheck = false;
+    }, 5000);
     setTimeout(() => {
       this.enableForm(nameField, messageField, emailField, sendButton);
-    }, 5000);
+      this.mailSuccess = false;
+    }, 7000);
 
   }
 

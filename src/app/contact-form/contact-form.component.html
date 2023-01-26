@@ -48,7 +48,8 @@
                 <div *ngIf="messageField.value == '' && formCheck || messageField.value.length == 0 && formCheck" class="required-hint">Your message is empty</div>
                 <div class="send-button">
                     <button type="submit" #sendButton>Send Message :)</button> 
-                    <mat-spinner [diameter]="50"></mat-spinner>
+                    <mat-spinner *ngIf="mailInProgress"></mat-spinner>
+                    <img *ngIf="mailSuccess" src="../../assets/img/others/mail.png">
                 </div>
             </form>
         </div>
