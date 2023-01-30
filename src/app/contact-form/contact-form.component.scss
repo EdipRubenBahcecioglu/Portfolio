@@ -18,6 +18,10 @@
     border: 4px solid #4B47FF;
     width: 100px;
     height: 0px;
+
+    @media (max-width: 1130px){
+        width: 60px;   
+    }
 }
 
 .header-text {
@@ -25,6 +29,14 @@
     color: white;
     margin-left: 42px;
     font-weight: bold;
+
+    @media (max-width: 1130px){
+        margin-left: 32px;   
+    }
+
+    @media (max-width: 1290px){
+        font-size: 70px;
+    }
 }
 
 .contact-box {
@@ -38,6 +50,10 @@
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 24px;
+
+    @media (max-width: 1290px){
+        font-size: 28px;   
+    }
 }
 
 .contact-text {
@@ -51,6 +67,10 @@
     width: 50vw;
     color: white;
     padding-top: 100px;
+
+    @media (max-width: 1130px){
+        margin-left: 150px;   
+    }
 }
 
 .purple-shadow {
@@ -73,6 +93,10 @@
     padding-top: 100px;
     height: calc(100vh - 336px);
 
+    @media (max-width: 1130px){
+        margin-right: 100px;   
+    }
+
     form {
         display: flex;
         flex-direction: column;
@@ -82,6 +106,10 @@
         color: white;
         font-family: 'Poppins';
         font-style: normal;
+
+        @media (max-width: 1870px){
+            height: 90%;
+        }
 
         input {
             width: 100%;

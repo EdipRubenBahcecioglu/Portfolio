@@ -14,11 +14,23 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 150px;
+
+    @media (max-width: 1130px){
+        padding-left: 100px;   
+    }
 }
 
 .about-me-text{
     width: 75%;
     margin-bottom: 24px;
+
+    @media (max-width: 1290px){
+        width: 90%;   
+    }
+
+    @media (max-width: 1280px){
+        font-size: 13px;
+    }
 }
 
 .about-me-dev-img{
@@ -29,12 +41,23 @@
     align-items: center;
     margin-right: 150px;
 
+    @media (max-width: 1130px){
+        margin-right: 100px;   
+    }
+
     img{
         height: 510px;
         width: 510px;
         object-fit: cover;
         border-radius: 100%;
         border: 4px solid #00bee8;
+        z-index: 2;
+        background: #182235;
+
+        @media (max-width: 1290px){
+            height: 425px;
+            width: 425px;
+        }
     }
 }
 
@@ -42,6 +65,10 @@
     font-size: 72px;
     margin-bottom: 24px;
     font-weight: bold;
+
+    @media (max-width: 1290px){
+        font-size: 60px;
+    }
 }
 
 .main-share-text{
@@ -49,6 +76,14 @@
     align-items: center;
     margin-bottom: 24px;
     width: 75%;
+
+    @media (max-width: 1290px){
+        width: 85%;   
+    }
+
+    @media (max-width: 1280px){
+        font-size: 13px;
+    }
 }
 
 .share-text{
@@ -58,9 +93,10 @@
 
 .about-me-background-shadow{
     position: absolute;
-    right: -50px;
+    right: 0px;
     top: -230px;
     height: 900px;
+    z-index: -1;
 }
 
 .blue-border{
@@ -69,6 +105,6 @@
     position: absolute;
     top: 50%;
     right: 0px;
-    width: 296px;
+    width: 530px;
 }
 

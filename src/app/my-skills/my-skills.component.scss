@@ -21,6 +21,10 @@
     flex-wrap: wrap;
     padding-left: 85px;
 
+    @media (max-width: 1130px){
+        padding-left: 75px;   
+    }
+
     img {
         height: 60px;
         width: 60px;
@@ -41,6 +45,31 @@
         margin: 65px;
         height: 100px;
         width: 70px;
+
+        @media (max-width: 1835px){
+            margin: 0px;
+            padding: 50px;
+        }
+
+        @media (max-width: 1595px){
+            margin: 0px;
+            padding: 40px;
+        }
+
+        @media (max-width: 1445px){
+            margin: 0px;
+            padding: 35px;
+        }
+
+        @media (max-width: 1355px){
+            margin: 0px;
+            padding: 30px;
+        }
+
+        @media (max-width: 1280px){
+            margin: 0px;
+            padding: 25px;
+        }
     }
 
     span{
@@ -81,12 +110,20 @@
     align-items: flex-end;
     padding-right: 150px;
     flex-direction: column;
+
+    @media (max-width: 1130px){
+        padding-right: 100px;   
+    }
 }
 
 .skills-headline {
     font-size: 90px;
     font-weight: bold;
     margin-bottom: 12px;
+
+    @media (max-width: 1290px){
+        font-size: 70px;
+    }
 }
 
 .skills-text {

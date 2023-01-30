@@ -24,6 +24,40 @@
         width: 120%;
         transform: rotate(5deg);
         filter: brightness(0) saturate(100%) invert(9%) sepia(12%) saturate(2451%) hue-rotate(182deg) brightness(100%) contrast(95%);
+
+        @media(max-width: 1800px) {
+            margin-top: -835px;
+        }
+
+        @media (max-width: 1750px) {
+            margin-top: -800px;
+        }
+
+        @media (max-width: 1715px) {
+            margin-top: -750px;
+        }
+
+        @media (max-width: 1555px) {
+            margin-top: -650px;
+        }
+
+        @media (max-width: 1445px) {
+            margin-top: -550px;
+        }
+
+        @media (max-width: 1355px) {
+            margin-top: -470px;
+        }
+
+        @media (max-width: 1290px) {
+            margin-top: -525px;
+        }
+
+        @media (max-width: 1200px) {
+            margin-top: -845px;
+            width: 170%;
+            transform: rotate(0deg);
+        }
     }
 }
 
@@ -33,6 +67,17 @@
     margin-left: 150px;
     position: relative;
 
+    @media (max-width: 1290px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 250px;
+    }
+
+    @media (max-width: 1130px){
+        margin-left: 100px;
+    }
+
     img:first-child {
         height: 500px;
         width: 410px;
@@ -40,10 +85,20 @@
         border-radius: 100%;
         margin-top: 100px;
         object-position: top;
+
+        @media (max-width: 1650px) {
+            margin-top: 0px;
+        }
+
+        @media (max-width: 1290px) {
+            margin-top: 0px;
+            height: 410px;
+            width: 300px;
+        }
     }
 }
 
-.profile-shadow-green{
+.profile-shadow-green {
     position: absolute;
     top: 60px;
     left: 60px;
@@ -53,9 +108,19 @@
     height: 580px;
     width: 550px;
     transform: rotate(45deg);
+
+    @media (max-width: 1650px) {
+        top: -15px;
+    }
+
+    @media (max-width: 1290px) {
+        top: 145px;
+        height: 435px;
+        width: 470px;
+    }
 }
 
-.profile-shadow-purple{
+.profile-shadow-purple {
     position: absolute;
     top: 60px;
     left: -195px;
@@ -65,10 +130,21 @@
     height: 580px;
     width: 550px;
     transform: rotate(45deg);
+
+    @media (max-width: 1650px) {
+        top: -15px;
+    }
+
+    @media (max-width: 1290px) {
+        top: 145px;
+        height: 435px;
+        width: 470px;
+        left: -150px;
+    }
 }
 
 
-.header-welcome-box{
+.header-welcome-box {
     height: calc(100vh - 100px);
     width: 60%;
     display: flex;
@@ -76,86 +152,163 @@
     align-items: center;
     margin-right: 150px;
     flex-direction: column;
+
+    @media (max-width: 1650px) {
+        padding-bottom: 100px;
+    }
+
+    @media (max-width: 1290px) {
+        padding-bottom: 250px;
+        align-items: flex-end;
+    }
+
+    @media (max-width: 1130px){
+        margin-right: 100px;   
+    }
 }
 
-.header-welcome-text{
+.header-welcome-text {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main-rotate-text{
+.main-rotate-text {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 64px;
+
+    @media (max-width: 1715px) {
+        font-size: 50px;
+    }
+
+    @media (max-width: 1555px) {
+        font-size: 45px;
+    }
+
+    @media (max-width: 1390px) {
+        font-size: 40px;
+    }
+
+    @media (max-width: 1290px) {
+        font-size: 35px;
+    }
 }
 
-.rotate-text2{
+.rotate-text2 {
     transform: rotate(-90deg);
 }
 
-.developer-name{
+.developer-name {
     color: white;
     font-weight: bold;
     font-size: 67px;
+
+    @media (max-width: 1870px) {
+        font-size: 57px;
+    }
+
+    @media (max-width: 1715px) {
+        font-size: 52px;
+    }
+
+    @media (max-width: 1555px) {
+        font-size: 45px;
+    }
+
+    @media (max-width: 1390px) {
+        font-size: 40px;
+    }
+
+    @media (max-width: 1290px) {
+        font-size: 35px;
+    }
 }
 
-.developer-position{
+.developer-position {
     font-size: 58px;
     color: #4B47FF;
+
+    @media (max-width: 1715px) {
+        font-size: 50px;
+    }
+
+    @media (max-width: 1555px) {
+        font-size: 46px;
+    }
+
+    @media (max-width: 1390px) {
+        font-size: 40px;
+    }
+
+    @media (max-width: 1290px) {
+        font-size: 35px;
+    }
 }
 
-.connect-btn{
+.connect-btn {
     margin-top: 24px;
     z-index: 2;
 
-    button{
-    background: #00BEE8;
-    padding: 15px 30px;
-    color: white;
-    border-radius: 10px;
-    width: 165px;
-    height: 58px;
-    font-size: 23px;
-    box-shadow: 4px 4px 4px 4px rgb(0, 0, 0,0.25);
-    transition: all 125ms ease-in;
-    border: none;
-    outline: none;
-
-    &:hover {
-        background-color: #4B47FF;
-        cursor: pointer;
-        transform: scale(1.2);
+    @media (max-width: 1290px) {
+        width: 510px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    button {
+        background: #00BEE8;
+        padding: 15px 30px;
+        color: white;
+        border-radius: 10px;
+        width: 165px;
+        height: 58px;
+        font-size: 23px;
+        box-shadow: 4px 4px 4px 4px rgb(0, 0, 0, 0.25);
+        transition: all 125ms ease-in;
+        border: none;
+        outline: none;
+
+        @media(max-width: 1390px) {
+            width: 145px;
+            font-size: 20px;
+        }
+
+        &:hover {
+            background-color: #4B47FF;
+            cursor: pointer;
+            transform: scale(1.2);
+        }
     }
 }
 
-.dev-contact-links{
+.dev-contact-links {
     position: absolute;
     bottom: 5px;
     display: flex;
     align-items: center;
 }
 
-.purple-border{
+.purple-border {
     width: 100px;
     height: 0px;
     border: 4px solid #4B47FF;
 }
 
-.dev-contact-icons{
+.dev-contact-icons {
     margin-left: 50px;
     width: 150px;
     display: flex;
     justify-content: space-between;
-    
-    img{
+
+    img {
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
             transform: scale(1.2);
             object-fit: cover;
@@ -163,17 +316,17 @@
     }
 }
 
-.dev-contact-mail{
+.dev-contact-mail {
     margin-left: 15px;
     color: white;
     font-size: 23px;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
 }
 
-.scroll-down-info{
+.scroll-down-info {
     position: absolute;
     bottom: 5px;
     right: 88px;
@@ -185,7 +338,7 @@
     justify-content: center;
 }
 
-.scroll-down-text{
+.scroll-down-text {
     transform: rotate(90deg);
     margin-bottom: 60px;
 }
