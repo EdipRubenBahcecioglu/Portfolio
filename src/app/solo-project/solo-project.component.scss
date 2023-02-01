@@ -4,6 +4,20 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+
+    @media (max-width: 1130px){
+        padding-right: 100px;
+        padding-left: 100px;   
+    }
+
+    @media (max-width: 970px){
+        flex-direction: column;
+        padding-left: 0px;
+        padding-right: 0px;
+        height: auto;
+    }
 }
 
 .laptop-img {
@@ -17,6 +31,16 @@
         height: 350px;
         width: 450px;
         object-fit: cover;
+
+        @media (max-width: 1130px){
+            height: 260px;
+            width: 380px;
+        }
+
+        @media (max-width: 1070px){
+            height: 210px;
+            width: 335px;
+        }
     }
 }
 
@@ -27,6 +51,11 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    @media (max-width: 970px){
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .project-name {
@@ -34,37 +63,53 @@
     font-size: 32px;
     color: #4B47FF;
     font-weight: bold;
+
+    @media (max-width: 1070px){
+        font-size: 28px;
+    }
 }
 
 .project-language {
     margin-bottom: 12px;
     font-size: 23px;
     color: #00BEE8;
+
+    @media (max-width: 1070px){
+        font-size: 20px;
+    }
 }
 
 .project-description {
     margin-bottom: 12px;
-    width: 60%;
+    width: 100%;
     font-size: 16px;
     color: white;
+
+    @media (max-width: 1070px){
+        font-size: 14   px;
+    }
 }
 
 .project-btn-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 45%;
 
-    @media (max-width: 1500px){
-        width: 45%;
-    }
-
-    @media (max-width: 1390px){
+    @media (max-width: 1650px){
         width: 50%;
     }
 
-    @media (max-width: 1280px){
+    @media (max-width: 1500px){
         width: 55%;
+    }
+
+    @media (max-width: 1390px){
+        width: 60%;
+    }
+
+    @media (max-width: 1280px){
+        width: 70%;
     }
 
     button {
@@ -87,6 +132,12 @@
     font-size: 23px;
     outline: none;
     z-index: 2;
+
+    @media (max-width: 1070px){
+        font-size: 17px;
+        height: 50px;
+        width: 130px;
+    }
 }
 
 .github button {
@@ -99,6 +150,12 @@
     color: white;
     font-size: 23px;
     background: none;
+
+    @media (max-width: 1070px){
+        font-size: 17px;
+        height: 50px;
+        width: 130px;
+    }
 }
 
 .otherDirectionProjectInfo{

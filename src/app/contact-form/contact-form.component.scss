@@ -37,6 +37,10 @@
     @media (max-width: 1290px){
         font-size: 70px;
     }
+
+    @media (max-width: 1070px){
+        font-size: 65px;
+    }
 }
 
 .contact-box {
@@ -44,6 +48,12 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
+    @media (max-width: 970px){
+        align-items: center;
+        flex-direction: column;
+        height: auto;   
+    }
 }
 
 .headline {
@@ -54,12 +64,24 @@
     @media (max-width: 1290px){
         font-size: 28px;   
     }
+
+    @media (max-width: 1070px){
+        font-size: 24px;
+    }
 }
 
 .contact-text {
     margin-bottom: 24px;
     width: 57%;
     font-size: 16px;
+
+    @media (max-width: 1070px){
+        font-size: 14px;
+    }
+
+    @media (max-width: 970px){
+        width: 100%;   
+    }
 }
 
 .main-contact-text-box {
@@ -69,7 +91,14 @@
     padding-top: 100px;
 
     @media (max-width: 1130px){
-        margin-left: 150px;   
+        margin-left: 100px;   
+    }
+
+    @media (max-width: 970px){
+        margin-left: 0px;
+        padding-top: 0px;
+        margin-bottom: 35px;
+        text-align: center;   
     }
 }
 
@@ -95,6 +124,12 @@
 
     @media (max-width: 1130px){
         margin-right: 100px;   
+    }
+
+    @media (max-width: 970px){
+        margin-top: 0px;
+        margin-right: 0px;
+        padding-top: 0px;
     }
 
     form {
@@ -146,6 +181,10 @@
             color: white;
             outline: none;
 
+            @media (max-width: 970px){
+                height: 170px;
+            }
+
             &:hover {
                 border: 1px solid #00BEE8;
                 cursor: pointer;
@@ -171,6 +210,12 @@
             box-shadow: 4px 4px 4px rgb(0 0 0 / 25%);
             transition: all 125ms ease-in;
 
+            @media (max-width: 1070px){
+                width: 200px;
+                height: 50px;
+                font-size: 20px;
+            }
+
             &:hover {
                 background-color: #4B47FF;
                 cursor: pointer;
@@ -190,6 +235,10 @@
     justify-content: center;
     align-items: center;
     padding: 4px;
+
+    @media (max-width: 1130px){
+        right: 100px;
+    }
 
     &:hover {
         cursor: pointer;
@@ -234,6 +283,10 @@
     width: 450px;
     justify-content: center;
 
+    @media (max-width: 970px){
+        padding-bottom: 35px;   
+    }
+
     img{
         position: absolute;
         right: 0px;
@@ -263,4 +316,10 @@ mat-spinner- svg {
     justify-content: center;
     position: absolute;
     right: 0px;
+}
+
+.last-words{
+    @media (max-width: 1070px){
+        font-size: 14px;
+    }
 }

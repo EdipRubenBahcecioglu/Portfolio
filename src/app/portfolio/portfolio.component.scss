@@ -22,6 +22,14 @@
     @media (max-width: 1290px){
         font-size: 70px;
     }
+
+    @media (max-width: 1070px){
+        font-size: 65px;
+    }
+
+    @media (max-width: 970px){
+        margin-top: 50px;   
+    }
 }
 
 .border-left{
@@ -81,6 +89,14 @@
 
     @media (max-width: 1130px){
         left: 260px;   
+    }
+
+    @media (max-width: 1070px){
+        left: 230px;   
+    }
+
+    @media (max-width: 1070px){
+        left: 200px;
     }
 }
 
@@ -155,6 +171,16 @@
         padding-left: 0px;
         width: 370px;
     }
+
+    @media (max-width: 1070px){
+        padding-left: 0px;
+        width: 340px;
+    }
+
+    @media (max-width: 995px){
+        padding-left: 0px;
+        width: 310px;
+    }
 }
 
 .background-shadow{
@@ -167,5 +193,9 @@
 
     @media (max-width: 1500px){
         left: -200px;
+    }
+
+    @media (max-width: 1130px){
+        left: -400px;
     }
 }

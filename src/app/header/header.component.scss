@@ -5,6 +5,10 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    @media (max-width: 970px){
+        flex-direction: column;
+    }
 }
 
 .header-background-layer {
@@ -54,7 +58,19 @@
         }
 
         @media (max-width: 1200px) {
-            margin-top: -845px;
+            margin-top: -900px;
+            width: 170%;
+            transform: rotate(0deg);
+        }
+
+        @media (max-width: 1130px) {
+            margin-top: -800px;
+            width: 170%;
+            transform: rotate(0deg);
+        }
+
+        @media (max-width: 1070px) {
+            margin-top: -725px;
             width: 170%;
             transform: rotate(0deg);
         }
@@ -74,8 +90,15 @@
         padding-bottom: 250px;
     }
 
-    @media (max-width: 1130px){
+    @media (max-width: 1130px) {
         margin-left: 100px;
+    }
+
+    @media (max-width: 970px){
+        margin-left: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 75px;
+        width: 100vw;
     }
 
     img:first-child {
@@ -118,6 +141,15 @@
         height: 435px;
         width: 470px;
     }
+
+    @media (max-width: 1070px) {
+        width: 420px;
+    }
+
+    @media (max-width: 970px){
+        top: 0px;
+        left: 40%;
+    }
 }
 
 .profile-shadow-purple {
@@ -141,6 +173,11 @@
         width: 470px;
         left: -150px;
     }
+
+    @media (max-width: 970px){
+        top: 0px;
+        right: 40%;
+    }
 }
 
 
@@ -162,8 +199,14 @@
         align-items: flex-end;
     }
 
-    @media (max-width: 1130px){
-        margin-right: 100px;   
+    @media (max-width: 1130px) {
+        margin-right: 100px;
+    }
+
+    @media (max-width: 970px){
+        margin-right: 0px;
+        width: 100vw;
+        align-items: center;
     }
 }
 
@@ -196,6 +239,14 @@
     @media (max-width: 1290px) {
         font-size: 35px;
     }
+
+    @media (max-width: 1070px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 970px){
+        font-size: 40px;   
+    }
 }
 
 .rotate-text2 {
@@ -226,6 +277,14 @@
     @media (max-width: 1290px) {
         font-size: 35px;
     }
+
+    @media (max-width: 1070px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 970px){
+        font-size: 40px;   
+    }
 }
 
 .developer-position {
@@ -247,6 +306,14 @@
     @media (max-width: 1290px) {
         font-size: 35px;
     }
+
+    @media (max-width: 1070px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 970px){
+        font-size: 40px;   
+    }
 }
 
 .connect-btn {
@@ -258,6 +325,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    @media (max-width: 1070px) {
+        width: 436px;
+        font-size: 16px;
+        height: 50px;
     }
 
     button {
@@ -321,6 +394,14 @@
     color: white;
     font-size: 23px;
 
+    @media (max-width: 1070px){
+        font-size: 20px;
+    }
+
+    @media (max-width: 970px){
+        display: none;   
+    }
+
     &:hover {
         cursor: pointer;
     }
@@ -336,9 +417,17 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 970px){
+        display: none;   
+    }
 }
 
 .scroll-down-text {
     transform: rotate(90deg);
     margin-bottom: 60px;
+
+    @media (max-width: 1070px){
+        font-size: 20px;
+    }
 }
