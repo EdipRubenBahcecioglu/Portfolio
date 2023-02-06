@@ -12,6 +12,10 @@
         justify-content: center;   
         padding-top: 50px;
     }
+
+    @media (max-width: 660px){
+        padding-top: 155px;
+    }
 }
 
 .about-me{
@@ -29,6 +33,10 @@
     @media (max-width: 970px){
         padding-left: 0px;
         align-items: center;
+    }
+
+    @media (max-width: 550px) {
+        width: 70vw;
     }
 }
 
@@ -99,6 +107,14 @@
     @media (max-width: 1070px){
         font-size: 55px;
     }
+
+    @media (max-width: 660px){
+        font-size: 50px;
+    }
+
+    @media (max-width: 550px) {
+        font-size: 45px;       
+    }
 }
 
 .main-share-text{
@@ -123,6 +139,10 @@
     @media (max-width: 1070px){
         font-size: 14px;
     }
+
+    @media (max-width: 550px) {
+        width: 80%;
+    }
 }
 
 .about-me-background-shadow{
@@ -131,6 +151,15 @@
     top: -230px;
     height: 900px;
     z-index: -1;
+
+    @media (max-width: 1070px){
+        width: 235px;
+    }
+
+    @media (max-width: 700px){
+        top: -145px;
+        width: 200px;
+    }
 }
 
 .blue-border{

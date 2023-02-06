@@ -6,6 +6,18 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+
+    @media (max-width: 660px){
+        height: 1845px;
+    }
+
+    @media (max-width: 625px) {
+        height: 1570px;
+    }
+
+    @media (max-width: 510px) {
+        height: 1640px;       
+    }
 }
 
 .header-box{
@@ -30,6 +42,14 @@
     @media (max-width: 970px){
         margin-bottom: 0px;
         padding-top: 50px;
+    }
+
+    @media (max-width: 660px){
+        font-size: 60px;
+    }
+
+    @media (max-width: 550px) {
+        font-size: 55px;       
     }
 }
 
@@ -110,6 +130,24 @@
 
     @media (max-width: 815px){
         left: 110px;
+    }
+
+    @media (max-width: 750px){
+        left: 80px;
+    }
+
+    @media (max-width: 700px){
+        left: 50px;
+    }
+
+    @media (max-width: 625px) {
+        width: 80px;
+        left: 50px;
+    }
+
+    @media (max-width: 550px) {
+        width: 80px;
+        left: 20px;
     }
 }
 
@@ -209,6 +247,26 @@
         padding-left: 0px;
         width: 220px;
     }
+
+    @media (max-width: 750px){
+        padding-left: 0px;
+        width: 190px;
+    }
+
+    @media (max-width: 700px){
+        padding-left: 0px;
+        width: 160px;
+    }
+
+    @media (max-width: 625px) {
+        padding-left: 0px;
+        width: 130px;
+    }
+
+    @media (max-width: 550px) {
+        padding-left: 0px;
+        width: 100px;
+    }
 }
 
 .background-shadow{
@@ -225,5 +283,9 @@
 
     @media (max-width: 1130px){
         left: -400px;
+    }
+
+    @media (max-width: 510px) {
+        left: -470px;       
     }
 }

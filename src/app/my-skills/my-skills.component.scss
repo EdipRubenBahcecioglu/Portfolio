@@ -16,6 +16,10 @@
         padding-top: 50px;
         justify-content: space-evenly;
     }
+
+    @media (max-width: 660px){
+        padding-top: 80px;
+    }
 }
 
 .skills-icons {
@@ -43,6 +47,11 @@
         width: 76%;
     }
 
+    @media (max-width: 660px){
+        width: 85%;
+        height: 50%;
+    }
+
     img {
         height: 60px;
         width: 60px;
@@ -52,6 +61,11 @@
         &:hover {
             cursor: pointer;
             animation: bounce 1s infinite;
+        }
+
+        @media (max-width: 625px) {
+            height: 50px;
+            width: 50px;
         }
     }
 
@@ -93,10 +107,34 @@
             margin: 0px;
             padding: 20px;
         }
+
+        @media (max-width: 730px){
+            margin: 0px;
+            padding: 15px;
+        }
+
+        @media (max-width: 660px){
+            margin: 0px;
+            padding: 15px;
+        }
+
+        @media (max-width: 590px) {
+            margin: 0px;
+            padding: 10px;
+        }
+
+        @media (max-width: 550px) {
+            margin: 0px;
+            padding: 5px;
+        }
     }
 
     span{
         text-align: center;
+
+        @media (max-width: 625px) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -157,6 +195,14 @@
     @media (max-width: 1070px){
         font-size: 65px;
     }
+
+    @media (max-width: 660px){
+        font-size: 60px;
+    }
+
+    @media (max-width: 550px) {
+        font-size: 55px;       
+    }
 }
 
 .skills-text {
@@ -209,6 +255,11 @@
             bottom: 20px;
         }
 
+        @media (max-width: 660px){
+            position: absolute;
+            bottom: -10px;
+        }
+
         &:hover {
             background-color: #4B47FF;
             cursor: pointer;
@@ -227,6 +278,14 @@
 
     @media (max-width: 970px){
         top: 110px;   
+    }
+
+    @media (max-width: 660px){
+        top: 145px;
+    }
+
+    @media (max-width: 625px) {
+        top: 195px;
     }
 }
 

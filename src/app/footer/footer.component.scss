@@ -16,11 +16,19 @@
     @media (max-width: 1070px){
         font-size: 14px;
     }
+
+    @media (max-width: 660px){
+        margin-left: 50px;
+    }
 }
 
 .impressum{
     font-size: 16px;
     transition: all 115ms ease-in-out;
+
+    @media (max-width: 800px){
+        font-size: 14px;
+    }
 
     &:hover{
         cursor: pointer;
@@ -50,6 +58,10 @@
     @media (max-width: 1070px){
         font-size: 20px;
     }
+
+    @media (max-width: 800px){
+        font-size: 16px;
+    }
 }
 
 .social-links{
@@ -61,6 +73,14 @@
 
     @media (max-width: 1130px){
         margin-right: 100px;   
+    }
+
+    @media (max-width: 800px){
+        width: 120px;
+    }
+
+    @media (max-width: 660px){
+        margin-right: 50px;   
     }
 
     img{
