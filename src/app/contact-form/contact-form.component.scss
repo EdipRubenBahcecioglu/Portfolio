@@ -4,6 +4,10 @@
     height: calc(100vh - 100px);
     position: relative;
     border-bottom: 4px solid #00BEE8;
+
+    @media (max-width: 970px){
+        padding-top: 50px;
+    }
 }
 
 .main-header-box {
@@ -12,6 +16,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @media (max-width: 970px){
+        justify-content: center;
+        position: relative;
+    }
 }
 
 .purple-border {
@@ -21,6 +30,12 @@
 
     @media (max-width: 1130px){
         width: 60px;   
+    }
+
+    @media (max-width: 970px){
+        position: absolute;
+        width: 100px;
+        left: 0px;
     }
 }
 
@@ -40,6 +55,10 @@
 
     @media (max-width: 1070px){
         font-size: 65px;
+    }
+
+    @media (max-width: 970px){
+        margin-left: 0px;
     }
 }
 

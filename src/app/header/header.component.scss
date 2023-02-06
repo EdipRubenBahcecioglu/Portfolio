@@ -74,6 +74,24 @@
             width: 170%;
             transform: rotate(0deg);
         }
+
+        @media (max-width: 970px) {
+            margin-top: -570px;
+            width: 170%;
+            transform: rotate(0deg);
+        }
+
+        @media (max-width: 900px){
+            margin-top: -480px;
+            width: 170%;
+            transform: rotate(0deg);
+        }
+
+        @media (max-width: 845px){
+            margin-top: -435px;
+            width: 170%;
+            transform: rotate(0deg);
+        }
     }
 }
 
@@ -150,6 +168,26 @@
         top: 0px;
         left: 40%;
     }
+
+    @media (max-width: 935px){
+        top: 0px;
+        left: 37%;
+    }
+
+    @media (max-width: 900px){
+        top: 0px;
+        left: 35%;
+    }
+
+    @media (max-width: 900px){
+        top: 0px;
+        left: 33%;
+    }
+
+    @media (max-width: 800px){
+        top: 0px;
+        left: 40%;
+    }
 }
 
 .profile-shadow-purple {
@@ -176,7 +214,22 @@
 
     @media (max-width: 970px){
         top: 0px;
-        right: 40%;
+        left: 15%;
+    }
+
+    @media (max-width: 935px){
+        top: 0px;
+        left: 16%;
+    }
+
+    @media (max-width: 900px){
+        top: 0px;
+        left: 15%;
+    }
+
+    @media (max-width: 800px){
+        top: 0px;
+        left: 5%;
     }
 }
 

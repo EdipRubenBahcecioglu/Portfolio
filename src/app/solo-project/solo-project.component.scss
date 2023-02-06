@@ -17,6 +17,7 @@
         padding-left: 0px;
         padding-right: 0px;
         height: auto;
+        padding-top: 25px;
     }
 }
 
@@ -160,12 +161,22 @@
 
 .otherDirectionProjectInfo{
     align-items: flex-end;
+
+    @media (max-width: 970px){
+        align-items: center;
+    }
 }
 
 .otherDirectionSoloProject{
     flex-direction: row-reverse;
+
+    @media (max-width: 970px){
+        flex-direction: column;
+    }
 }
 
 .otherDirectionProjectDescription{
-    text-align: end;
+    @media (max-width: 970px){
+        text-align: center;
+    }
 }
