@@ -22,8 +22,8 @@
                 <div class="solo-input-field">
                     <input (click)="checkFormsInput()" (keyup)="checkFormsInput()" [class.inputSucces]="nameField.value.length > 0 && formCheck" [class.inputAlert]="nameField.value == '' && formCheck || nameField.value.length == 0 && formCheck" required type="text" name="name" #nameField placeholder="Your name">
                     <div class="input-feedback">   
-                        <img *ngIf="nameField.value == '' && formCheck || nameField.value.length == 0 && formCheck" src="../../assets/img/others/warning.png">
-                        <img *ngIf="nameField.value.length > 0 && formCheck" src="../../assets/img/others/succes.png">
+                        <img *ngIf="nameField.value == '' && formCheck || nameField.value.length == 0 && formCheck" src="./../assets/img/others/warning.png">
+                        <img *ngIf="nameField.value.length > 0 && formCheck" src="./../assets/img/others/succes.png">
                     </div>
                 </div>
                 <div *ngIf="nameField.value == '' && formCheck || nameField.value.length == 0 && formCheck" class="required-hint">Your name is required</div>
@@ -31,8 +31,8 @@
                 <div class="solo-input-field">
                     <input (click)="checkFormsInput()" (keyup)="checkFormsInput()" [class.inputSucces]="emailField.value.length > 0 && emailField.value.includes('@') && formCheck" [class.inputAlert]="emailField.value == '' && formCheck || emailField.value.length == 0 && formCheck || !emailField.value.includes('@') && formCheck" required type="email" name="email" #emailField placeholder="Your email">
                     <div class="input-feedback">
-                        <img *ngIf="emailField.value == '' && formCheck || emailField.value.length == 0 && formCheck || !emailField.value.includes('@') && formCheck" src="../../assets/img/others/warning.png">
-                        <img *ngIf="emailField.value.length > 0 && emailField.value.includes('@') && formCheck" src="../../assets/img/others/succes.png">
+                        <img *ngIf="emailField.value == '' && formCheck || emailField.value.length == 0 && formCheck || !emailField.value.includes('@') && formCheck" src="./../assets/img/others/warning.png">
+                        <img *ngIf="emailField.value.length > 0 && emailField.value.includes('@') && formCheck" src="./../assets/img/others/succes.png">
                     </div>
                 </div>
                 <div *ngIf="emailField.value == '' && formCheck || emailField.value.length == 0 && formCheck || !emailField.value.includes('@') && formCheck" class="required-hint">Your email is required</div>
@@ -41,25 +41,25 @@
                 <div class="solo-input-field">
                     <textarea (click)="checkFormsInput()" (keyup)="checkFormsInput()" [class.inputSucces]="messageField.value.length > 0 && formCheck" [class.inputAlert]="messageField.value == '' && formCheck || messageField.value.length == 0 && formCheck" required type="text" name="message" #messageField placeholder="Your text"></textarea>
                     <div class="input-feedback">
-                        <img *ngIf="messageField.value == '' && formCheck || messageField.value.length == 0 && formCheck" src="../../assets/img/others/warning.png">
-                        <img *ngIf="messageField.value.length > 0 && formCheck" src="../../assets/img/others/succes.png">
+                        <img *ngIf="messageField.value == '' && formCheck || messageField.value.length == 0 && formCheck" src="./../assets/img/others/warning.png">
+                        <img *ngIf="messageField.value.length > 0 && formCheck" src="./../assets/img/others/succes.png">
                     </div>
                 </div>
                 <div *ngIf="messageField.value == '' && formCheck || messageField.value.length == 0 && formCheck" class="required-hint">Your message is empty</div>
                 <div class="send-button">
                     <button type="submit" #sendButton>Send Message :)</button> 
                     <mat-spinner *ngIf="mailInProgress"></mat-spinner>
-                    <img *ngIf="mailSuccess" src="../../assets/img/others/mail.png">
+                    <img *ngIf="mailSuccess" src="./../assets/img/others/mail.png">
                 </div>
             </form>
         </div>
     </div>
 
     <div class="purple-shadow">
-        <img src="../../assets/img/backgrounds/shadow/contact-shadow.png">
+        <img src="./../assets/img/backgrounds/shadow/contact-shadow.png">
     </div>
 
     <div class="arrow-up-box" (click)="scrollTop()">
-        <img src="../../assets/img/others/arrow-up.png">
+        <img src="./../assets/img/others/arrow-up.png">
     </div>
 </div>

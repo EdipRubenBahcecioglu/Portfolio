@@ -68,6 +68,11 @@ header {
     position: absolute;
     right: 50px;
     cursor: pointer;
+    display: none;
+
+    @media (max-width: 510px) {
+        display: flex;
+    }
 
     img {
         height: 25px;
