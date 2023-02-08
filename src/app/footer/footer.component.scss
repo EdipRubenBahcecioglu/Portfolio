@@ -1,97 +1,111 @@
-.main-footer-box{
+.main-footer-box {
     display: flex;
     height: 300px;
     justify-content: space-between;
     align-items: center;
     color: white;
+
+    @media (max-width: 510px) {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 220px;
+    }
 }
 
-.dev-name-impressum{
+.dev-name-impressum {
     margin-left: 150px;
 
-    @media (max-width: 1130px){
-        margin-left: 100px;   
+    @media (max-width: 1130px) {
+        margin-left: 100px;
     }
 
-    @media (max-width: 1070px){
+    @media (max-width: 1070px) {
         font-size: 14px;
     }
 
-    @media (max-width: 660px){
+    @media (max-width: 660px) {
         margin-left: 50px;
+    }
+
+    @media (max-width: 510px) {
+        margin-left: 0px;
     }
 }
 
-.impressum{
+.impressum {
     font-size: 16px;
     transition: all 115ms ease-in-out;
 
-    @media (max-width: 800px){
+    @media (max-width: 800px) {
         font-size: 14px;
     }
 
-    &:hover{
+    &:hover {
         cursor: pointer;
         text-decoration: underline 2px solid #00BEE8;
     }
 }
 
-.copyright{
+.copyright {
     display: flex;
     align-items: center;
 }
 
-.copyright-img{
+.copyright-img {
     height: 20px;
     width: 20px;
 
-    img{
+    img {
         height: 100%;
         width: 100%;
     }
 }
 
-.copyright-name{
+.copyright-name {
     font-size: 23px;
     margin-left: 8px;
 
-    @media (max-width: 1070px){
+    @media (max-width: 1070px) {
         font-size: 20px;
     }
 
-    @media (max-width: 800px){
+    @media (max-width: 800px) {
         font-size: 16px;
     }
 }
 
-.social-links{
+.social-links {
     margin-right: 150px;
     width: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 1130px){
-        margin-right: 100px;   
+    @media (max-width: 1130px) {
+        margin-right: 100px;
     }
 
-    @media (max-width: 800px){
+    @media (max-width: 800px) {
         width: 120px;
     }
 
-    @media (max-width: 660px){
-        margin-right: 50px;   
+    @media (max-width: 660px) {
+        margin-right: 50px;
     }
 
-    img{
+    @media (max-width: 510px) {
+        margin-right: 0px;
+    }
+
+    img {
         height: 30px;
         width: 30px;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
             transform: scale(1.2);
             object-fit: cover;
         }
     }
 }
-

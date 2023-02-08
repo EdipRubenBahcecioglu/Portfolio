@@ -1,4 +1,4 @@
-<div class="main-header-box">
+<div id="header" class="main-header-box">
     <div class="header-background-layer">
         <img src="./../../assets/img/backgrounds/header_background.png">
     </div>
@@ -32,8 +32,8 @@
 <div class="dev-contact-links">
     <div class="purple-border"></div>
     <div class="dev-contact-icons">
-        <img src="../../assets/img/socials/github.png">
-        <img src="../../assets/img/socials/mail.png">
+        <img (click)="openLink('https://github.com/')" src="../../assets/img/socials/github.png">
+        <img (click)="openMail('edip-bahcecioglu@hotmail.de')" src="../../assets/img/socials/mail.png">
         <img src="../../assets/img/socials/linked_in.png">
     </div>
     <div class="dev-contact-mail">

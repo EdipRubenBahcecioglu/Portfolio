@@ -18,4 +18,12 @@ export class HeaderComponent implements OnInit {
     let el = document.getElementById(target);
     el.scrollIntoView({behavior: "smooth"});
   }
+
+  openLink(link){
+    window.open(link, "_blank");
+  }
+
+  openMail(emailTo){
+    location.href = "mailto:"+emailTo;
+  }
 }

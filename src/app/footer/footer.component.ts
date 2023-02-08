@@ -12,4 +12,12 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openLink(link){
+    window.open(link, "_blank");
+  }
+
+  openMail(emailTo){
+    location.href = "mailto:"+emailTo;
+  }
+
 }

@@ -5,4 +5,17 @@
         <a (click)="scrollTo('skills')">Skills</a>
         <a (click)="scrollTo('portfolio')">Portfolio</a>
     </div>
+
+    <div class="responsive-menu-icon">
+        <img (click)="controllNavbar(); scrollTop()" src="./../../assets/img/others/responsive-menu.png">
+    </div>
 </header>
+
+<div class="responsive-navbar" [ngClass]="showResNavbar ? 'd-unset' : 'd-none'">
+    <div class="responsive-navbar-links">
+        <a (click)="scrollTo('about-me'); controllNavbar()">About me</a>
+        <a (click)="scrollTo('skills'); controllNavbar()">Skills</a>
+        <a (click)="scrollTo('portfolio'); controllNavbar()">Portfolio</a>
+        <a (click)="scrollTo('contact'); controllNavbar()">Contact</a>
+    </div>
+</div>

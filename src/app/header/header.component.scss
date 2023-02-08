@@ -117,6 +117,15 @@
         @media (max-width: 510px) {
             margin-top: -460px;   
         }
+
+        @media (max-width: 480px) {
+            margin-top: -590px;
+            width: 350%;
+        }
+
+        @media (max-width: 420px) {
+            margin-top: -450px;
+        }
     }
 }
 
@@ -147,6 +156,10 @@
     @media (max-width: 750px) {
         margin-bottom: 40px;
     }
+
+    @media (max-width: 480px) {
+        padding-top: 40px;
+    }
 }
 
 .dev-img {
@@ -165,6 +178,11 @@
         margin-top: 0px;
         height: 410px;
         width: 300px;
+    }
+
+    @media (max-width: 480px) {
+        height: 290px;
+        width: 215px;       
     }
 }
 
@@ -243,6 +261,16 @@
     @media (max-width: 510px) {
         left: 25%;       
     }
+
+    @media (max-width: 480px) {
+        left: 18%;
+        width: 375px;
+        height: 365px;       
+    }
+
+    @media (max-width: 420px) {
+        left: 15%;       
+    }
 }
 
 .profile-shadow-purple {
@@ -312,6 +340,16 @@
     @media (max-width: 510px) {
         left: -85px;
     }
+
+    @media (max-width: 480px) {
+        left: -15px;
+        height: 355px;
+        width: 380px;
+    }
+
+    @media (max-width: 420px) {
+        left: -45px;       
+    }
 }
 
 
@@ -352,6 +390,11 @@
     @media (max-width: 660px) {
         padding-left: 50px;
         padding-right: 50px;
+    }
+
+    @media (max-width: 420px) {
+        padding-left: 0px;
+        padding-right: 0px;       
     }
 }
 
@@ -397,6 +440,10 @@
 
     @media (max-width: 550px) {
         font-size: 25px;       
+    }
+
+    @media (max-width: 480px) {
+        font-size: 20px;       
     }
 }
 
@@ -448,6 +495,10 @@
     @media (max-width: 550px) {
         font-size: 25px;       
     }
+
+    @media (max-width: 480px) {
+        font-size: 20px;       
+    }
 }
 
 .developer-position {
@@ -488,6 +539,10 @@
 
     @media (max-width: 550px) {
         font-size: 25px;       
+    }
+
+    @media (max-width: 480px) {
+        font-size: 20px;       
     }
 }
 

@@ -65,6 +65,10 @@
     @media (max-width: 625px) {
         width: 70%;
     }
+
+    @media (max-width: 420px) {
+        width: 80%;       
+    }
 }
 
 .project-name {
@@ -137,6 +141,14 @@
         width: 90%;       
     }
 
+    @media (max-width: 455px) {
+        width: 100%;       
+    }
+
+    @media (max-width: 420px) {
+        width: 95%;       
+    }
+
     button {
         transition: all 125ms ease-in-out;
         &:hover {
@@ -188,6 +200,10 @@
 
     @media (max-width: 970px){
         align-items: center;
+    }
+
+    @media (max-width: 420px) {
+        width: 80%;       
     }
 }
 

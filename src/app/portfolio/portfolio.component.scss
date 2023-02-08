@@ -18,6 +18,10 @@
     @media (max-width: 510px) {
         height: 1640px;       
     }
+
+    @media (max-width: 455px) {
+        height: 1730px;       
+    }
 }
 
 .header-box{
@@ -50,6 +54,10 @@
 
     @media (max-width: 550px) {
         font-size: 55px;       
+    }
+
+    @media (max-width: 480px) {
+        font-size: 45px;       
     }
 }
 
@@ -148,6 +156,19 @@
     @media (max-width: 550px) {
         width: 80px;
         left: 20px;
+    }
+
+    @media (max-width: 480px) {
+        width: 50px;
+        left: 60px;       
+    }
+
+    @media (max-width: 455px) {
+        left: 40px;
+    }
+
+    @media (max-width: 420px) {
+        left: 20px;       
     }
 }
 
@@ -266,6 +287,18 @@
     @media (max-width: 550px) {
         padding-left: 0px;
         width: 100px;
+    }
+
+    @media (max-width: 480px) {
+        width: 110px;       
+    }
+
+    @media (max-width: 455px) {
+        width: 90px;       
+    }
+
+    @media (max-width: 420px) {
+        width: 70px;       
     }
 }
 

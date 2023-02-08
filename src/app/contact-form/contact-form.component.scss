@@ -45,6 +45,10 @@
         width: 100px;
         left: 0px;
     }
+
+    @media (max-width: 420px) {
+        width: 50px;       
+    }
 }
 
 .header-text {
@@ -75,6 +79,10 @@
 
     @media (max-width: 550px) {
         font-size: 55px;       
+    }
+
+    @media (max-width: 480px) {
+        font-size: 45px;       
     }
 }
 
@@ -281,6 +289,10 @@
 
     @media (max-width: 1130px){
         right: 100px;
+    }
+
+    @media (max-width: 660px) {
+        right: 50px;
     }
 
     &:hover {
