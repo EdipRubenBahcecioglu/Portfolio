@@ -1,3 +1,7 @@
+.solo-project{
+    max-width: 100%;
+}
+
 .solo-project-box {
     height: 300px;
     display: flex;
@@ -6,6 +10,7 @@
     margin-bottom: 100px;
     padding-left: 150px;
     padding-right: 150px;
+    max-width: 100vw;
 
     @media (max-width: 1130px){
         padding-right: 100px;
@@ -69,6 +74,10 @@
     @media (max-width: 420px) {
         width: 80%;       
     }
+
+    @media (max-width: 310px) {
+        width: 90%;
+    }
 }
 
 .project-name {
@@ -90,6 +99,10 @@
     @media (max-width: 1070px){
         font-size: 20px;
     }
+
+    @media (max-width: 400px) {
+        font-size: 16px;       
+    }
 }
 
 .project-description {
@@ -98,8 +111,8 @@
     font-size: 16px;
     color: white;
 
-    @media (max-width: 1070px){
-        font-size: 14   px;
+    @media (max-width: 400px) {
+        font-size: 14px;
     }
 }
 
@@ -149,6 +162,10 @@
         width: 95%;       
     }
 
+    @media (max-width: 310px) {
+        width: 100%;       
+    }
+
     button {
         transition: all 125ms ease-in-out;
         &:hover {
@@ -175,6 +192,15 @@
         height: 50px;
         width: 130px;
     }
+
+    @media (max-width: 400px) {
+        width: 115px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
 }
 
 .github button {
@@ -193,6 +219,15 @@
         height: 50px;
         width: 130px;
     }
+
+    @media (max-width: 400px) {
+        width: 115px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
 }
 
 .otherDirectionProjectInfo{
@@ -204,6 +239,10 @@
 
     @media (max-width: 420px) {
         width: 80%;       
+    }
+
+    @media (max-width: 310px) {
+        width: 90%;
     }
 }
 

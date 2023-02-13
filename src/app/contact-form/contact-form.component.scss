@@ -1,12 +1,12 @@
 .main-contact-box {
     width: 100vw;
     max-width: 100%;
-    height: calc(100vh - 100px);
+    height: 100vh;
     position: relative;
     border-bottom: 4px solid #00BEE8;
 
     @media (max-width: 970px){
-        padding-top: 50px;
+        padding-top: 100px;
     }
 
     @media (max-width: 660px){
@@ -14,7 +14,11 @@
     }
 
     @media (max-width: 625px) {
-        height: 800px;
+        height: 845px;
+    }
+
+    @media (max-width: 575px) {
+        height: 900px;
     }
 }
 
@@ -46,8 +50,12 @@
         left: 0px;
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 550px) {
         width: 50px;       
+    }
+
+    @media (max-width: 310px) {
+        width: 35px;       
     }
 }
 
@@ -84,6 +92,14 @@
     @media (max-width: 480px) {
         font-size: 45px;       
     }
+
+    @media (max-width: 400px) {
+        font-size: 40px;       
+    }
+
+    @media (max-width: 350px) {
+        font-size: 35px;       
+    }
 }
 
 .contact-box {
@@ -110,6 +126,14 @@
 
     @media (max-width: 1070px){
         font-size: 24px;
+    }
+
+    @media (max-width: 350px) {
+        font-size: 20px;       
+    }
+
+    @media (max-height: 915px){
+        font-size: 20px;       
     }
 }
 
@@ -186,15 +210,15 @@
     form {
         display: flex;
         flex-direction: column;
-        height: 85%;
+        height: 510px;
         justify-content: space-between;
         align-items: center;
         color: white;
         font-family: 'Poppins';
         font-style: normal;
 
-        @media (max-width: 1870px){
-            height: 90%;
+        @media (max-width: 400px) {
+            height: 475px;
         }
 
         input {
@@ -267,6 +291,10 @@
                 font-size: 20px;
             }
 
+            @media (max-width: 290px) {
+                font-size: 18px;
+            }
+
             &:hover {
                 background-color: #4B47FF;
                 cursor: pointer;
@@ -337,6 +365,7 @@
     position: relative;
     width: 450px;
     justify-content: center;
+    max-width: 100%;
 
     @media (max-width: 970px){
         padding-bottom: 35px;   
