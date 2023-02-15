@@ -391,17 +391,6 @@
     @media (max-width: 350px) {
         left: 10%;
     }
-
-    // @media (min-width: 375px) and (max-height: 667px) {
-    //     top: 0px;
-    // }
-
-    // @media (min-width: 360px) and (max-height: 740px) {
-    //     top: 0px;
-    // }
-    // @media (min-width: 280px) and (max-height: 653px){
-    //     top: 0px;
-    // }
 }
 
 .profile-shadow-purple {
@@ -498,18 +487,6 @@
     @media (max-width: 290px) {
         left: -140px;
     }
-
-    // @media (min-width: 375px) and (max-height: 667px) {
-    //     top: 0px;
-    // }
-
-    // @media (min-width: 360px) and (max-height: 740px) {
-    //     top: 0px;
-    // }
-
-    // @media (min-width: 280px) and (max-height: 653px){
-    //     top: 0px;
-    // }
 }
 
 
@@ -815,6 +792,25 @@
 
     img {
         cursor: pointer;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+            object-fit: cover;
+        }
+    }
+
+    span {
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        background: white;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 22px;
 
         &:hover {
             cursor: pointer;

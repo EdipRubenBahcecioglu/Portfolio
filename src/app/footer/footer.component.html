@@ -1,21 +1,25 @@
 <div class="main-footer-box">
     <div class="dev-name-impressum">
-        <div class="dev-name">Edip Ruben</div>
-        <div class="impressum">Impressum</div>
+        <div class="dev-name">
+            <img src="./../../assets/img/favicon/logo_v2_w.png">
+            <span>Edip Ruben</span>
+        </div>
     </div>
 
-    <div class="copyright">
-        <div class="copyright-img">
-            <img src="./../assets/img/others/copyright.png">
+    <div class="copyright-impressum-box">
+        <div class="copyright">
+            <img class="copyright-img" src="./../assets/img/others/copyright.png">
+            <span>Edip Ruben 2022</span>
         </div>
-        <div class="copyright-name">
-            Edip Ruben 2022
+        <div class="impressum">
+            <span (click)="openLink('https://edipbahcecioglu.com/impressum')" data-replace="Impressum">Impressum</span>
         </div>
     </div>
 
     <div class="social-links">
-        <img (click)="openLink('https://github.com/')" src="./../assets/img/socials/github.png">
-        <img (click)="openMail('edip-bahcecioglu@hotmail.de')" src="./../assets/img/socials/mail.png">
-        <img src="./../assets/img/socials/linked_in.png">
+        <img title="Github" (click)="openLink('https://github.com/')" src="./../assets/img/socials/github.png">
+        <img title="Mail" (click)="openMail('edip-bahcecioglu@hotmail.de')" src="./../assets/img/socials/mail.png">
+        <img title="LinkedIn" (click)="openLink('https://www.linkedin.com/in/edip-ruben-bahcecioglu-6b5095266/')" src="./../assets/img/socials/linked_in.png">
+        <span title="Xing" (click)="openLink('https://www.xing.com/profile/EdipRuben_Bahcecioglu/cv')" class="alternative-xing-logo">X</span>
 </div>
 </div>
