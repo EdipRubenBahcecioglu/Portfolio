@@ -9,15 +9,16 @@
     <div class="copyright-impressum-box">
         <div class="copyright">
             <img class="copyright-img" src="./../assets/img/others/copyright.png">
-            <span>Edip Ruben 2022</span>
+            <span>Edip Ruben 2023</span>
         </div>
-        <div class="impressum">
-            <span (click)="openLink('https://edipbahcecioglu.com/impressum')" data-replace="Impressum">Impressum</span>
+        <!-- <div (click)="openLink('https://edipbahcecioglu.com/impressum')" class="impressum"> -->
+            <div routerLink="/imprint" class="impressum">
+            <span>Impressum</span>
         </div>
     </div>
 
     <div class="social-links">
-        <img title="Github" (click)="openLink('https://github.com/')" src="./../assets/img/socials/github.png">
+        <img title="Github" (click)="openLink('https://github.com/EdipRubenBahcecioglu')" src="./../assets/img/socials/github.png">
         <img title="Mail" (click)="openMail('edip-bahcecioglu@hotmail.de')" src="./../assets/img/socials/mail.png">
         <img title="LinkedIn" (click)="openLink('https://www.linkedin.com/in/edip-ruben-bahcecioglu-6b5095266/')" src="./../assets/img/socials/linked_in.png">
         <span title="Xing" (click)="openLink('https://www.xing.com/profile/EdipRuben_Bahcecioglu/cv')" class="alternative-xing-logo">X</span>

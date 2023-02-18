@@ -13,7 +13,7 @@ export class MySkillsComponent implements OnInit {
   }
 
   scrollTo(target) {
-    console.log(`scrolling to ${target}`);
+    // console.log(`scrolling to ${target}`);
     let el = document.getElementById(target);
     el.scrollIntoView({behavior: "smooth"});
   }

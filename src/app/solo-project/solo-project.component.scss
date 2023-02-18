@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     padding-left: 150px;
     padding-right: 150px;
     max-width: 100vw;
@@ -26,7 +26,7 @@
     }
 
     @media (max-width: 625px) {
-        margin-bottom: 0px;
+        margin-bottom: 70px; // war 0
     }
 }
 

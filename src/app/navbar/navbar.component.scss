@@ -54,6 +54,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
+    min-width: 150px;
 
     img{
         height: 35px;

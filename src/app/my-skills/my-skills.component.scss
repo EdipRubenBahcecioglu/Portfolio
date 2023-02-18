@@ -352,7 +352,7 @@
     border: 4px solid #4B47FF;
 
     @media (max-width: 2030px) {
-        top: 335px;
+        top: 380px;
     }
 
     @media (max-width: 1070px) {
@@ -411,6 +411,10 @@
 }
 
 .skills-btn-mobile {
+
+    button{
+        padding: 0px;
+    }
     @media (max-width: 915px) {
         display: flex !important;
     }

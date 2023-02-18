@@ -10,7 +10,7 @@
     }
 
     @media (max-width: 660px){
-        padding-top: 90px;
+        padding-top: 75px; // war 90 
     }
 
     @media (max-width: 625px) {
@@ -289,6 +289,10 @@
                 width: 200px;
                 height: 50px;
                 font-size: 20px;
+            }
+
+            @media (max-width: 915px){
+                padding: 0px;
             }
 
             @media (max-width: 290px) {

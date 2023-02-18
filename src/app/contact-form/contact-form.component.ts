@@ -36,7 +36,7 @@ export class ContactFormComponent implements OnInit {
 
   async sendMail() {
     this.mailInProgress = true;
-    console.log('Sending Mail', this.myForm);
+    // console.log('Sending Mail', this.myForm);
     let nameField = this.nameField.nativeElement;
     let messageField = this.messageField.nativeElement;
     let emailField = this.emailField.nativeElement;
