@@ -1,10 +1,10 @@
-.main-impressum-box {
-    height: 70vh;
+.main-data-protection-box {
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
+    text-align: center;
     padding-left: 150px;
     padding-right: 150px;
     padding-top: 50px;
@@ -29,34 +29,12 @@
         padding-left: 25px;
         padding-right: 25px;
     }
-}
 
-.header {
-    h1 {
-        text-align: center;
+    a{
+        color: antiquewhite;
     }
 }
 
-.developer-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 24px;
-}
-
-.developer-adress {
-    display: flex;
-    justify-content: center;
-    align-items: cemter;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 24px;
-}
-
-.important-information {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.important-rights{
+    text-align: left !important;
 }

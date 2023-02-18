@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ImprintComponent } from './imprint/imprint.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ImprintComponent } from './imprint/imprint.component';
     SoloProjectComponent,
     ContactFormComponent,
     FooterComponent,
-    ImprintComponent
+    ImprintComponent,
+    DataProtectionComponent
   ],
   imports: [
     BrowserModule,

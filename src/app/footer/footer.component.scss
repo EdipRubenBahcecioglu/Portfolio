@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     color: white;
+    background-color: #141d2f;
 
     @media (max-width: 800px) {
         flex-direction: column;
@@ -33,7 +34,7 @@
     }
 }
 
-.impressum {
+.imprint{
     font-size: 16px;
     transition: all 225ms ease-in-out;
     cursor: pointer;
@@ -77,6 +78,10 @@
     @media (max-width: 800px) {
         font-size: 14px;
     }
+}
+
+.data-secure{
+    margin-left: 12px;
 }
 
 .copyright {
