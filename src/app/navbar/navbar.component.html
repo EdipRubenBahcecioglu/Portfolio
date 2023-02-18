@@ -3,18 +3,18 @@
         <img src="./../../assets/img/favicon/logo_v2_w.png">
         <span>Edip Ruben</span>
     </div>
-    <div class="header-navbar">
+    <div class="header-navbar" [class.d-none]="router.url == '/imprint' || router.url == '/dataprotection'">
         <a (click)="scrollTo('about-me')">About me</a>
         <a (click)="scrollTo('skills')">Skills</a>
         <a (click)="scrollTo('portfolio')">Portfolio</a>
     </div>
 
-    <div class="responsive-menu-icon">
+    <div class="responsive-menu-icon" [class.d-none]="router.url == '/imprint' || router.url == '/dataprotection'">
         <img (click)="controllNavbar(); scrollTop()" src="./../../assets/img/others/responsive-menu.png">
     </div>
 </header>
 
-<div class="responsive-navbar" [ngClass]="showResNavbar ? 'd-unset' : 'd-none'">
+<div class="responsive-navbar" [class.d-none]="router.url == '/imprint' || router.url == '/dataprotection'" [ngClass]="showResNavbar ? 'd-unset' : 'd-none'">
     <div class="responsive-navbar-links">
         <a (click)="scrollTo('about-me'); controllNavbar()">About me</a>
         <a (click)="scrollTo('skills'); controllNavbar()">Skills</a>
