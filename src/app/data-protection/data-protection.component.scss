@@ -39,3 +39,13 @@
 .important-rights{
     text-align: left !important;
 }
+
+.important-link{
+    max-width: 100%;
+}
+
+.link{
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
